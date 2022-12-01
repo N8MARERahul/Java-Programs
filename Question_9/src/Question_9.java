@@ -42,14 +42,19 @@ public class Question_9 {
 
         PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
-        System.out.println("Enter Registration number: ");
-        preparedStatement.setInt(1, scanner.nextInt());
-        System.out.println("Enter Student's Name: ");
-        preparedStatement.setString(2, scanner.nextLine());
-        System.out.println("Enter City: ");
-        preparedStatement.setString(3, scanner.nextLine());
-        System.out.println("Enter Phone Number: ");
-        preparedStatement.setInt(4, scanner.nextInt());
+        // System.out.println("Enter Registration number: ");
+        // preparedStatement.setInt(1, scanner.nextInt());
+        // System.out.println("Enter Student's Name: ");
+        // preparedStatement.setString(2, scanner.nextLine());
+        // System.out.println("Enter City: ");
+        // preparedStatement.setString(3, scanner.nextLine());
+        // System.out.println("Enter Phone Number: ");
+        // preparedStatement.setInt(4, scanner.nextInt());
+        preparedStatement.setString(1, "124598");
+		preparedStatement.setString(2, "Raj Kumar");
+		preparedStatement.setString(3, "Delhi");
+		preparedStatement.setString(4, "1234567890");
+
 
         int rows = preparedStatement.executeUpdate();
 
@@ -74,6 +79,7 @@ public class Question_9 {
             System.out.println("Name is: " + sname);
             System.out.println("City is: " + city);
             System.out.println("Contact No: " + contactno);
+            System.out.println();
         }
     }
 }
